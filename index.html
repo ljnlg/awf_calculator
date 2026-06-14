@@ -17,7 +17,7 @@
     <!-- Plotly.js -->
     <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
 
-    <!-- PyScript (Latest) - 不加载 polyfill.io -->
+    <!-- PyScript (Latest) -->
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 
@@ -209,14 +209,7 @@
         &copy; 3M 2026. All Rights Reserved. &nbsp;&nbsp; 3M Confidential.
     </footer>
 
-    <!-- PyScript Config -->
-    <py-config>
-        packages = ["pandas", "numpy"]
-        [[fetch]]
-        files = ["./main.py", "./calculator.py", "./constants.py", "./CIE241_H1_5nm.csv"]
-    </py-config>
-
-    <!-- App Entry -->
+    <!-- PyScript App Entry -->
     <py-script src="./main.py"></py-script>
 </body>
 </html>
