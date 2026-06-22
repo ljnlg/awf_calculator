@@ -191,6 +191,11 @@ def init_event_handlers():
     bind_click_handler_by_id("calc_btn", on_calculate_click)
     bind_click_handler_by_id("export_btn", on_export_click)
     bind_click_handler_by_selector("button[py-click='clear_history_click']", clear_history_click)
+    
+    # 确保计算按钮在初始化时处于启用状态
+    calc_btn = document.getElementById("calc_btn")
+    if calc_btn:
+        calc_btn.disabled = False
 
 def on_calculate_click(event):
     global _calc_in_progress
