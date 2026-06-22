@@ -17,9 +17,9 @@
     <!-- Plotly.js -->
     <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
 
-    <!-- PyScript (Latest) -->
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script>
 
     <style>
         body { background-color: #f8f9fa; }
@@ -209,7 +209,14 @@
         &copy; 3M 2026. All Rights Reserved. &nbsp;&nbsp; 3M Confidential.
     </footer>
 
-    <!-- PyScript App Entry -->
-    <py-script src="./main.py"></py-script>
+    <!-- PyScript Config -->
+    <py-config>
+        packages = ["pandas", "numpy"]
+        [[fetch]]
+        files = ["./main.py", "./calculator.py", "./constants.py", "./CIE241_H1_5nm.csv"]
+    </py-config>
+
+    <!-- App Entry -->
+    <script type="py" src="./main.py"></script>
 </body>
 </html>
